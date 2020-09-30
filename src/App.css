@@ -4,7 +4,7 @@
   height: 150px;
   border-bottom: 2px solid black;
 }
-.recipeDiv { 
+.recipeDisplay { 
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -15,7 +15,7 @@
   background-color: #fafafa;
 }
 
-.recipeDiv h2 { 
+.recipeDisplay h2 { 
   text-align: left;
   font-size: 30px;
   line-height: 50px;

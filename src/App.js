@@ -43,10 +43,10 @@ class App extends Component {
     return (
       <div>
         <div className ="App">
-          <h1>Food Here</h1>
-          <button onClick={this.randomRecipe}>Pick a Random Recipe</button>
+          <h1>Find Vegetarian Recipes Here</h1>
+          <button onClick={this.randomRecipe}>Click for a Random Recipe</button>
         </div>
-        <div className ="recipeDiv">
+        <div className ="recipeDisplay">
           <Recipe currentRecipe={this.state.currentRecipe} />
         </div>
       </div>
