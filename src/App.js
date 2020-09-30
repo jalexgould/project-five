@@ -1,19 +1,20 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
+import firebase from './firebase.js';
 import './App.css';
-import firebase from './firebase';
 import Recipe from './Recipe.js';
-
+// imports 
 
 class App extends Component {
+  // initilize state 
   constructor() {
     super();
 
     this.state = {
-      data:null,
-      currentRecipe: 'Select A Random Recipe'
+      data:'',
+      currentRecipe: 'Click To Get Started'
     };
   }
-  
+  // request for data 
   componentDidMount() {
     const dbref = firebase.database().ref();
 
@@ -25,22 +26,23 @@ class App extends Component {
     });
   })
   }
-
+// random button for recipes
   randomRecipe = () => { 
   const randomIndex = Math.floor(Math.random() * this.state.data.recipe.length);
 
   console.log ('randomIndex', randomIndex);
   }
-
+// display requested data 
   render() {
     return (
       <div className ="App">
         <h1>Food Here</h1>
-        <recipe currentRecipe={this.state.currentRecipe} />
+        <Recipe currentRecipe={this.state.currentRecipe} />
         <button onClick={this.randomRecipe}>Pick a Random Recipe</button>
       </div>
     
       // <div className ="Recipes"></div>
+      // figure out how to display firebase results in a div per click
     );
   }
 }
