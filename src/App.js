@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import './App.css';
 import firebase from './firebase';
+import Recipe from './Recipe.js';
 
 
 class App extends Component {
@@ -16,33 +17,30 @@ class App extends Component {
   componentDidMount() {
     const dbref = firebase.database().ref();
 
-    dbref.on('value'), (response) => { 
+    dbref.on('value', (response) => { 
       const firebaseData = response.val();
 
       this.setState ({
       data:firebaseData,
     });
-  }
+  })
   }
 
   randomRecipe = () => { 
-    console.log (this.state.data);
-    const randomIndex = math.floor(math.random() * this.state.data.recipe.length);
-    const randomRecipe = this.state.data.mood[randomIndex];
-    
-    this.setState({
-      currentRecipe: randomRecipe
-    })
-  }
+  const randomIndex = Math.floor(Math.random() * this.state.data.mood.length);
 
+  console.log ('randomIndex', randomIndex);
+  }
+  
   render() {
     return (
       <div className ="App">
         <h1>Food Here</h1>
         <recipe currentRecipe={this.state.currentRecipe} />
-
         <button onClick={this.randomRecipe}>Pick a Random Recipe</button>
       </div>
+    
+      // <div className ="Recipes"></div>
     );
   }
 }
