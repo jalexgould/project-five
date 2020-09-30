@@ -20,7 +20,7 @@ class App extends Component {
 
     dbref.on('value', (response) => { 
       const firebaseData = response.val();
-
+      console.log(firebaseData)
       this.setState ({
       data:firebaseData,
     });
@@ -28,20 +28,28 @@ class App extends Component {
   }
 // random button for recipes
   randomRecipe = () => { 
-  const randomIndex = Math.floor(Math.random() * this.state.data.recipe.length);
+  const randomIndex = Math.floor(Math.random() * this.state.data.length);
 
   console.log ('randomIndex', randomIndex);
-  }
+  
+  this.setState({
+    currentRecipe:this.state.data[randomIndex],
+
+    
+  })
+}
 // display requested data 
   render() {
     return (
-      <div className ="App">
-        <h1>Food Here</h1>
-        <Recipe currentRecipe={this.state.currentRecipe} />
-        <button onClick={this.randomRecipe}>Pick a Random Recipe</button>
+      <div>
+        <div className ="App">
+          <h1>Food Here</h1>
+          <button onClick={this.randomRecipe}>Pick a Random Recipe</button>
+        </div>
+        <div className ="recipeDiv">
+          <Recipe currentRecipe={this.state.currentRecipe} />
+        </div>
       </div>
-    
-      // <div className ="Recipes"></div>
       // figure out how to display firebase results in a div per click
     );
   }
