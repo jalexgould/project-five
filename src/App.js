@@ -27,11 +27,11 @@ class App extends Component {
   }
 
   randomRecipe = () => { 
-  const randomIndex = Math.floor(Math.random() * this.state.data.mood.length);
+  const randomIndex = Math.floor(Math.random() * this.state.data.recipe.length);
 
   console.log ('randomIndex', randomIndex);
   }
-  
+
   render() {
     return (
       <div className ="App">
