@@ -4,7 +4,7 @@ class Recipe extends Component {
    render () { 
       return ( 
          <div className="results">
-            {/* <h2> Current Recipe :</h2> */}
+            <h2> Check Out Some Great Food Here</h2>
             <ol>
             <li>
                {this.props.currentRecipe.name}
@@ -14,6 +14,9 @@ class Recipe extends Component {
             </li>
             <li>
                {this.props.currentRecipe.steps}
+            </li>
+            <li>
+            {this.props.currentRecipe.img}
             </li>
             </ol>
          </div>
