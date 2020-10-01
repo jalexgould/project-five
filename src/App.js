@@ -30,7 +30,7 @@ class App extends Component {
   randomRecipe = () => { 
   const randomIndex = Math.floor(Math.random() * this.state.data.length);
 
-  console.log ('randomIndex', randomIndex);
+  // console.log ('randomIndex', randomIndex);
   
   this.setState({
     currentRecipe:this.state.data[randomIndex],
@@ -43,12 +43,15 @@ class App extends Component {
     return (
       <div>
         <div className ="App">
-          <h1>Find Vegetarian Recipes Here</h1>
+          <h1>Find Great Vegetarian Recipes Here</h1>
           <button onClick={this.randomRecipe}>Click for a Random Recipe</button>
         </div>
         <div className ="recipeDisplay">
           <Recipe currentRecipe={this.state.currentRecipe} />
         </div>
+        {/* <div>
+          <button className="btnTwo" onClick={this.randomRecipe}>Click for New Recipe</button>
+        </div> */}
       </div>
       // figure out how to display firebase results in a div per click
     );

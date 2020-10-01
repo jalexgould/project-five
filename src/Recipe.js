@@ -3,20 +3,20 @@ import React, { Component } from 'react';
 class Recipe extends Component { 
    render () { 
       return ( 
-         <div>
-            <h2> Current Recipe is : </h2>
-            <p>
+         <div className="results">
+            {/* <h2> Current Recipe :</h2> */}
+            <ol>
+            <li>
                {this.props.currentRecipe.name}
-            </p>
-            <p>
+            </li>
+            <li>
                {this.props.currentRecipe.ingredients}
-            </p>
-            <p>
+            </li>
+            <li>
                {this.props.currentRecipe.steps}
-            </p>
+            </li>
+            </ol>
          </div>
-
-         // <p>select new recipe by clicking the Recipe Button </p>
       )
    }
 }

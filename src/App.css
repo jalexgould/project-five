@@ -1,21 +1,30 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 .App {
   text-align: center;
-  background-color: #ff990066;
-  height: 150px;
+  background-color: #088e1879;
+  height: 250px;
   border-bottom: 2px solid black;
 }
 .recipeDisplay { 
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  text-align: center;
   width: auto;
-  height: 700px;
-  margin: 40px;
-  background-color: #fafafa;
+  height: 100%;
+  margin: 40px 40px 0 40px;
+  background-color: #fafafab8;
 }
 
 .recipeDisplay h2 { 
+  font-family: 'BioRhyme', serif ;
+  font-weight:800;
   text-align: left;
   font-size: 30px;
   line-height: 50px;
@@ -23,18 +32,38 @@
   width: 65%;
 }
 
-.recipeDiv p { 
+.results{
+  display: flex;
+  flex-direction: column;
   text-align: left;
+  font-family: 'BioRhyme', serif ;
+  font-weight:400;  
   font-size: 20px;
   line-height: 50px;
-  letter-spacing: 2.5px;
-  width: 65%;
+  letter-spacing: 3.5px;
+  background: rgba(192, 192, 192, 0.372);
+  padding: 60px;
+  width: 70%;
 }
 
+li {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+}
 
 button { 
   font-size: 20px;
   height: 50px;
   background-color: #fafafa;
   border: 2px solid black;
+  margin-top: 100px;
+}
+
+.btnTwo { 
+  font-size: 15px;
+  height: 50px;
+  background-color: #fafafa5e;
+  color: rgba(0, 0, 0, 0.209);
+  border: 2px solid rgba(0, 0, 0, 0.231);
 }
