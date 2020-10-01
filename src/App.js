@@ -44,7 +44,7 @@ class App extends Component {
           <h1>Food Here</h1>
           <h2>Vegetarian Recipe Finder</h2>
           <p> Click The Search Button Below To Start Searching</p>
-          <button onClick={this.randomRecipe}>Great New Recipes Here</button>
+          <button onClick={this.randomRecipe}>Get New Recipes Here</button>
         </div>
         <div className ="recipeDisplay">
           <Recipe currentRecipe={this.state.currentRecipe} />
