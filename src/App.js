@@ -41,13 +41,20 @@ class App extends Component {
     return (
       <div>
         <div className ="App">
-          <h1>Food Here</h1>
+          <h1>Cook Book</h1>
           <h2>Vegetarian Recipe Finder</h2>
           <p> Click The Search Button Below To Start Searching</p>
           <button onClick={this.randomRecipe}>Get New Recipes Here</button>
         </div>
+        <div>
+        </div>
         <div className ="recipeDisplay">
           <Recipe currentRecipe={this.state.currentRecipe} />
+        </div>
+        <div className="footer">
+          <p> Click The Search Button To Start New Search </p>
+          <button onClick={this.randomRecipe}>Get New Recipes Here</button>
+          <p className="created">Created By Alex Gould 2020</p>
         </div>
       </div>
     );
